@@ -6,3 +6,5 @@ Seguem primeiras etapas não versionadas:
 15.01.2018 - criação e conexão da interface com o banco de dados. (PHP, Mysql e HTML).
 
 16.01.2018 - validação de login do usuario (PHP, Mysql e HTML).
+
+19.01.2018 - Validação de usuario já cadastrado e funcionalidade de logoff.
