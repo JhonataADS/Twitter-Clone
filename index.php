@@ -1,5 +1,4 @@
 <?php
-
 	$erro = isset($_GET['erro']) ? $_GET['erro'] : 0; // caso erro ocorra get apresenta o erro... senão atribuir valor '0'
 
 ?>
@@ -18,7 +17,32 @@
 		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 	
 		<script>
-			// código javascript						
+
+			$(document).ready( function(){
+				// verificar se os campos usuario e senha foram preenchidos
+				
+
+				$('#btn_login').click(function(){
+
+					var campo_vazio = false;
+
+					if($('#campo_usuario').val() == ''){
+						$('#campo_usuario').css({'border-color': '#FF0000'}); //caso o compo esteja vazio seta a borda com a cor vermelha.
+						campo_vazio = true;
+					}else{
+						$('#campo_usuario').css({'border-color': '#CCC'});
+					} // CASO PREENCHDO A BORDA RETORNA A COR CINZA
+
+					if($('#campo_senha').val() == ''){
+						$('#campo_senha').css({'border-color': '#FF0000'})
+						campo_vazio = true;
+					}else{
+						$('#campo_senha').css({'border-color': '#CCC'});
+					}
+
+					if(campo_vazio) return false; //valor padrao da variavel é false.
+				});			
+			});
 		</script>
 	</head>
 

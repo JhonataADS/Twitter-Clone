@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Máquina: localhost
--- Data de Criação: 16-Jan-2018 às 22:38
+-- Data de Criação: 21-Jan-2018 às 22:13
 -- Versão do servidor: 5.6.13
 -- versão do PHP: 5.4.17
 
@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   `email` varchar(100) NOT NULL,
   `senha` varchar(32) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=21 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=23 ;
 
 --
 -- Extraindo dados da tabela `usuarios`
@@ -47,7 +47,9 @@ INSERT INTO `usuarios` (`id`, `usuario`, `email`, `senha`) VALUES
 (17, 'neto', 'neto@negao.da.zl', '5ae136d9363e8b0e0b57018f800bd255'),
 (18, 'Lucas', 'Lukinhascuzao@santos.com', 'cd1588101203f13f872131b33cb1a3cf'),
 (19, 'jhonata', 'jhonata@twitter.com', '202cb962ac59075b964b07152d234b70'),
-(20, 'joaoFat', 'joao@fat.com', '202cb962ac59075b964b07152d234b70');
+(20, 'joaoFat', 'joao@fat.com', '202cb962ac59075b964b07152d234b70'),
+(21, 'LucasViado', 'lucas@viado.com', '949e66396170ae42ad1eeab144805a99'),
+(22, 'lalalalalala', 'teste@criptografia.com', '202cb962ac59075b964b07152d234b70');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

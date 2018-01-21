@@ -1,17 +1,18 @@
-<?php
+<?php 
+	session_start();
 
-	$erro_usuario = isset ($_GET['erro_usuario']) ? $_GET['erro_usuario']	: 0;
-	$erro_email = isset ($_GET['erro_email']) ? $_GET['erro_email']		: 0;
+	if(!isset($_SESSION['usuario'])){// verifica se a variavel em questão está preenchida ou não.
+		header('Location: index.php?erro=1');//impede a mudança de pagina via url, retornando a pagina index.
+	}
 
-?>
-
+ ?>
 
 <!DOCTYPE HTML>
 <html lang="pt-br">
 	<head>
 		<meta charset="UTF-8">
 
-		<title>Twitter clone</title>
+		<title>Home Twitter</title>
 		
 		<!-- jquery - local -->
 		<script src="jquery/jquery-2.2.0.min.js"></script>
@@ -38,7 +39,7 @@
 	        
 	        <div id="navbar" class="navbar-collapse collapse">
 	          <ul class="nav navbar-nav navbar-right">
-	            <li><a href="index.php">Voltar para Home</a></li>
+	            <li><a href="sair.php">Sair</a></li>
 	          </ul>
 	        </div><!--/.nav-collapse -->
 	      </div>
@@ -51,37 +52,13 @@
 
 	    	<div class="col-md-4"></div>
 	    	<div class="col-md-4">
-	    		<h3>Inscreva-se já.</h3>
-	    		<br />
-				<form method="post" action="registra_usuario.php" id="formCadastrarse">
-					<div class="form-group">
-						<input type="text" class="form-control" id="usuario" name="usuario" placeholder="Usuário" required>
-						<?php
-							if ($erro_usuario) {
-								echo'<font color= "#FF0000"> Usuario já cadastrado </font>';
-							}
-						?>
-					</div>
+	    	Usuario autenticado!!!
+	    	<br>
+	    	<?php echo $_SESSION['usuario'] ?>
+	    	<br>
+			<?php echo $_SESSION['email'] ?></div>
 
-					<div class="form-group">
-						<input type="email" class="form-control" id="logar" name="email" placeholder="email" required>
-						<?php
-							if ($erro_email) {
-								echo'<font color= "#FF0000"> Email já cadastrado </font>';
-							}
-						?>
-
-					</div>
-					
-					<div class="form-group">
-						<input type="password" class="form-control" id="senha" name="senha" placeholder="Senha" required>
-					</div>
-					
-					<button type="submit" class="btn btn-primary form-control">Inscreva-se</button>
-				</form>
-			</div>
 			<div class="col-md-4"></div>
-
 			<div class="clearfix"></div>
 			<br />
 			<div class="col-md-4"></div>
