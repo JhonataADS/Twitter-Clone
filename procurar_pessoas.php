@@ -32,8 +32,11 @@ session_start();
 								success: function(data){
 									$('#pessoas').html(data);
 
-									$('.btn-seguir').click(function(){
+									$('.btn-seguir').click( function(){
 										var id_usuario = $(this).data('id_usuario');
+
+										$('#btn-seguir_' + id_usuario).hide();
+										$('#btn-deixar_seguir_' + id_usuario).show();
 
 										$.ajax({
 											url: 'seguir.php',
@@ -44,6 +47,24 @@ session_start();
 											}
 
 										});
+									});
+									
+									$('.btn-deixar_seguir').click( function(){
+										var id_usuario = $(this).data('id_usuario');
+
+										$('#btn-seguir_' + id_usuario).show();
+										$('#btn-deixar_seguir_' + id_usuario).hide();
+
+										$.ajax({
+											url: 'deixar_seguir.php',
+											method: 'post',
+											data: {deixar_seguir_id_usuario: id_usuario},
+											success: function(data){
+												alert('registro deletado');
+											}
+
+										});
+
 									});
 								}
 							});
