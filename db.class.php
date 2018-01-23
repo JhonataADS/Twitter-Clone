@@ -1,6 +1,6 @@
 <?php
-	class db{
-		
+class db{
+	
 		private $host = 'localhost';//host.
 		private $usuario = 'root';//usuario.
 		private $senha = 'usbw';//senha.
@@ -12,11 +12,11 @@
 			mysqli_set_charset($con, 'utf8');//ajusta o charset de comunicação com o banco.
 
 			if(mysqli_connect_errno()){
-                echo 'Erro ao tentar se conectar com BD MySQL: ' . mysqli_connect_error();
-            }
-            
+				echo 'Erro ao tentar se conectar com BD MySQL: ' . mysqli_connect_error();
+			}
+			
 			return $con; //retona a conexão com o banco de dados.
 		}
 		
 	}
-?>
+	?>

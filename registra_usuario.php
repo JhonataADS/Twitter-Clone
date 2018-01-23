@@ -14,8 +14,8 @@
 
 
 	//usuario
-		$sql = "select * from usuarios where usuario = '$usuario'";
-		if ($resultado_id = mysqli_query($link, $sql)){
+	$sql = "select * from usuarios where usuario = '$usuario'";
+	if ($resultado_id = mysqli_query($link, $sql)){
 
 		$dados_usuario = mysqli_fetch_array($resultado_id);
 		
@@ -24,11 +24,11 @@
 		}
 
 	}else{
-			echo ' erro ao tentar localizar o usuario';
+		echo ' erro ao tentar localizar o usuario';
 	}
 	//email
-		$sql = "select * from usuarios where email = '$email'";
-		if ($resultado_id = mysqli_query($link, $sql)){
+	$sql = "select * from usuarios where email = '$email'";
+	if ($resultado_id = mysqli_query($link, $sql)){
 
 		$dados_usuario = mysqli_fetch_array($resultado_id);
 		
@@ -37,7 +37,7 @@
 		}
 
 	}else{
-			echo 'erro ao tentar localizar o email';
+		echo 'erro ao tentar localizar o email';
 	}
 
 
@@ -64,4 +64,4 @@
 	}else{
 		echo 'usuario não cadastrado';
 	}
-?>
+	?>

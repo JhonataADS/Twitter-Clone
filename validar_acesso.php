@@ -21,8 +21,10 @@
 
 		if(isset($dados_usuario['usuario'])){ //verifica se o retorno contem algum registro
 
+			$_SESSION['id_usuario'] = $dados_usuario['id'];
 			$_SESSION['usuario'] = $dados_usuario['usuario'];
 			$_SESSION['email'] = $dados_usuario['email'];
+			
 			header('Location: home.php');//direciona para a home.
 		}else{
 			header('Location: index.php?erro=1'); //força o retorno para a pagina principal com mensagem de erro "via location: url".

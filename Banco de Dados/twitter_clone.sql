@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Máquina: localhost
--- Data de Criação: 22-Jan-2018 às 14:24
+-- Data de Criação: 22-Jan-2018 às 17:04
 -- Versão do servidor: 5.6.13
 -- versão do PHP: 5.4.17
 
@@ -34,16 +34,7 @@ CREATE TABLE IF NOT EXISTS `tweet` (
   `tweet` varchar(140) NOT NULL,
   `data_inclusao` datetime DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id_tweet`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
-
---
--- Extraindo dados da tabela `tweet`
---
-
-INSERT INTO `tweet` (`id_tweet`, `id_usuario`, `tweet`, `data_inclusao`) VALUES
-(1, 19, 'olá, esse é o meu teste', '2018-01-22 11:55:30'),
-(2, 23, 'teste de publicação, outro login', '2018-01-22 12:05:01'),
-(3, 19, 'teste de campo limpo', '2018-01-22 12:17:54');
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
 
 -- --------------------------------------------------------
 
