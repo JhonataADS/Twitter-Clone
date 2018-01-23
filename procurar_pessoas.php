@@ -31,8 +31,22 @@ session_start();
 								data: $('#form_procurar_pessoas').serialize(), //serialize funciona com o "name" recuperando os dados do formulário.
 								success: function(data){
 									$('#pessoas').html(data);
+
+									$('.btn-seguir').click(function(){
+										var id_usuario = $(this).data('id_usuario');
+
+										$.ajax({
+											url: 'seguir.php',
+											method: 'post',
+											data: {seguir_id_usuario: id_usuario},
+											success: function(data){
+												alert('registro efetuado');
+											}
+
+										});
+									});
 								}
-							})
+							});
 			}
 		});
 
